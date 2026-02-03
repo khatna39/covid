@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Covid 19 Rates</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="legend"></div>
+    <div id="title">
+        Covid 19 Rates
+    </div>
+    <div id="subtitle">
+        Year 2020, Choropleth Map
+    </div>
+
+    <script>
+        window.mapConfig = {
+            type : "choropleth",
+            data : "assets/us-covid-2020-rates.json",
+            valueField : "rates",
+            title : "Covid 19 Rates"
+        };
+    </script>
+    
+    <script src="js/main.js"></script>
+
+</body>
+</html>
